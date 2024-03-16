@@ -1,15 +1,14 @@
+import Image from "next/image";
 import UpArrow from "./arrow";
 
 export default function Header() {
   return (
     <div className="flex flex-row w-full gap-6 items- justify-start">
-      <img
+      <Image
         alt="profile-image"
         loading="lazy"
         width="110"
         height="110"
-        decoding="async"
-        data-nimg="1"
         src="https://github.com/vigneshshettyin.png"
         className="rounded-full"
       />
