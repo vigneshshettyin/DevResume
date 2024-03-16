@@ -25,7 +25,7 @@ export default function WorkSection() {
             </div>
           </a>
           <p className="text-neutral-600 max-w-2xl">
-            I'm a seasoned developer specializing in life sciences and
+            I&apos;m a seasoned developer specializing in life sciences and
             healthcare platforms. Notable achievements include integrating OLAP
             engines for real-time analytics solutions. I design robust backend
             systems, ensuring seamless data management while meeting industry

@@ -5,8 +5,9 @@ export default function AboutMe() {
       <p className="text-neutral-600">
         Unlock unprecedented speed and reliability with a backend wizard
         renowned for transforming sluggish query response times into
-        lightning-fast results. Let's team up and revolutionize your backend
-        operations with unparalleled efficiency and performance optimization
+        lightning-fast results. Let&apos;s team up and revolutionize your
+        backend operations with unparalleled efficiency and performance
+        optimization
       </p>
     </div>
   );
