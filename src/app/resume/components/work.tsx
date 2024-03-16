@@ -29,10 +29,13 @@ export default function WorkSection() {
             healthcare platforms. Notable achievements include integrating OLAP
             engines for real-time analytics solutions. I design robust backend
             systems, ensuring seamless data management while meeting industry
-            standards. I collaborate with cross-functional teams to refine
-            solutions for optimal performance and usability. Actively involved
-            in continuous improvement initiatives, like performance optimization
-            and scalability enhancements, to keep the platform innovative.
+            standards.
+          </p>
+          <p className="text-neutral-600 max-w-2xl mt-4">
+            I collaborate with cross-functional teams to refine solutions for
+            optimal performance and usability. Actively involved in continuous
+            improvement initiatives, like performance optimization and
+            scalability enhancements, to keep the platform innovative.
           </p>
         </div>
       </div>
