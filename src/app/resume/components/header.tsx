@@ -9,7 +9,7 @@ export default function Header() {
         loading="lazy"
         width="110"
         height="110"
-        src={"https://avatars.githubusercontent.com/u/77713888?v=4"}
+        src={"/image.png"}
         className="rounded-full"
       />
       <div className="flex flex-col justify-center items-start">
