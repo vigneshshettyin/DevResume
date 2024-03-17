@@ -3,6 +3,8 @@ import AboutMe from "@components/about";
 import WorkSection from "@components/work";
 import DownloadResume from "@components/download";
 import { WorkDataProperties, ProfileDataProperties } from "./interfaces/common";
+import Footer from "@components/footer";
+import Project from "@components/project";
 
 const workSectionData: WorkDataProperties[] = [
   {
@@ -44,6 +46,8 @@ export default function Resume() {
         <AboutMe AboutMeText={ProfileSectionData.about} />
         <WorkSection WorkData={workSectionData} />
         <DownloadResume resume_url={ProfileSectionData.resume_url} />
+        {/* <Project /> */}
+        <Footer />
       </div>
     </>
   );
