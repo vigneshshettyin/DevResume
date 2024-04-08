@@ -1,4 +1,4 @@
-import { AboutMeProps } from "../interfaces/common";
+import { AboutMeProps } from "@interfaces";
 
 const AboutMe: React.FC<AboutMeProps> = ({ AboutMeText }) => {
   return (

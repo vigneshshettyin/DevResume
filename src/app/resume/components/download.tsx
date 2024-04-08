@@ -1,4 +1,4 @@
-import { DownloadResumeProps } from "../interfaces/common";
+import { DownloadResumeProps } from "@interfaces";
 
 const DownloadResume: React.FC<DownloadResumeProps> = ({ resume_url }) => {
   return (

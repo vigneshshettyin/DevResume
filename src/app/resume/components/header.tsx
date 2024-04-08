@@ -1,6 +1,6 @@
 import Image from "next/image";
 import UpArrow from "./arrow";
-import { ProfileProps } from "../interfaces/common";
+import { ProfileProps } from "@interfaces";
 
 const Header: React.FC<ProfileProps> = ({ ProfileData }) => {
   return (

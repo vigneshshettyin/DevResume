@@ -1,6 +1,6 @@
 import UpArrow from "./arrow";
 import Skills from "./skills";
-import { WorkProps } from "../interfaces/common";
+import { WorkProps } from "@interfaces";
 
 const WorkSection: React.FC<WorkProps> = ({ WorkData }) => {
   return (

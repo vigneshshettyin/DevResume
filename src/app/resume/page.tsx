@@ -2,7 +2,7 @@ import Header from "@components/header";
 import AboutMe from "@components/about";
 import WorkSection from "@components/work";
 import DownloadResume from "@components/download";
-import { WorkDataProperties, ProfileDataProperties } from "./interfaces/common";
+import { WorkDataProperties, ProfileDataProperties } from "@interfaces";
 import Footer from "@components/footer";
 import Project from "@components/project";
 
