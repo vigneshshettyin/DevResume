@@ -8,6 +8,8 @@ const skills = [
   "Snowflake",
   "AWS",
   "Docker",
+  "Big Data",
+  "k6",
 ];
 
 const Project = () => {

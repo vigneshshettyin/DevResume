@@ -33,9 +33,9 @@ const WorkSection: React.FC<WorkProps> = ({ WorkData }) => {
               <p className="text-neutral-600 max-w-2xl mt-4">
                 {work.description}
               </p>
+              <Skills skills={work.skills} />
             </div>
           </div>
-          <Skills skills={work.skills} />
         </div>
       ))}
     </div>

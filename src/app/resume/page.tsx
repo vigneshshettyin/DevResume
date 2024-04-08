@@ -23,6 +23,11 @@ const workSectionData: WorkDataProperties[] = [
       "Snowflake",
       "AWS",
       "Docker",
+      "Big Data",
+      "Redis",
+      "RabbitMQ",
+      "Celery",
+      "Grafana k6",
     ],
   },
 ];
