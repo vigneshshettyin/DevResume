@@ -16,6 +16,15 @@ export interface WorkProps {
   WorkData: WorkDataProperties[];
 }
 
+export interface SocialLinkProperties {
+  name: string;
+  url: string;
+}
+
+export interface SocialLinksProps {
+  SocialLinks: SocialLinkProperties[];
+}
+
 export interface ProjectDataProperties {
   name: string;
   display_image: string;

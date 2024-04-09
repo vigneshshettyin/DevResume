@@ -10,6 +10,7 @@ import {
 } from "@interfaces";
 import Footer from "@components/footer";
 import Project from "@components/project";
+import Social from "@components/social";
 
 const ProjectSectionData: ProjectDataProperties[] = [
   {
@@ -63,6 +64,29 @@ const ProfileSectionData: ProfileDataProperties = {
   resume_url: "https://cdn.vshetty.dev/DevResume/resume.pdf",
 };
 
+const SocailLinksData = [
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/vigneshshettyin",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/vigneshshettyin",
+  },
+  {
+    name: "Personal Blog",
+    url: "https://blogs.vshetty.dev",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/vigneshshettyin",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/vigneshshettyin",
+  },
+];
+
 export default function Resume() {
   return (
     <>
@@ -72,6 +96,7 @@ export default function Resume() {
         <WorkSection WorkData={WorkSectionData} />
         <Project ProjectData={ProjectSectionData} />
         {/* <DownloadResume resume_url={ProfileSectionData.resume_url} /> */}
+        <Social SocialLinks={SocailLinksData} />
         <Footer />
       </div>
     </>
