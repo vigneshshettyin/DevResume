@@ -16,6 +16,21 @@ export interface WorkProps {
   WorkData: WorkDataProperties[];
 }
 
+export interface ProjectDataProperties {
+  name: string;
+  display_image: string;
+  type: string;
+  date: string;
+  description: string;
+  live_url: string;
+  repo_url: string;
+  skills: string[];
+}
+
+export interface ProjectProps {
+  ProjectData: ProjectDataProperties[];
+}
+
 export interface ProfileDataProperties {
   name: string;
   photo: string;

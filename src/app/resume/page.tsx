@@ -1,12 +1,32 @@
 import Header from "@components/header";
 import AboutMe from "@components/about";
 import WorkSection from "@components/work";
-import DownloadResume from "@components/download";
-import { WorkDataProperties, ProfileDataProperties } from "@interfaces";
+// Removed in v0.0.1
+// import DownloadResume from "@components/download";
+import {
+  WorkDataProperties,
+  ProfileDataProperties,
+  ProjectDataProperties,
+} from "@interfaces";
 import Footer from "@components/footer";
 import Project from "@components/project";
 
-const workSectionData: WorkDataProperties[] = [
+const ProjectSectionData: ProjectDataProperties[] = [
+  {
+    name: "Meetly",
+    display_image: "https://cdn.vshetty.dev/DevResume/vshetty.png",
+    type: "Personal Project",
+    date: "June 2021 - July 2021",
+    description:
+      "Meetly is a comprehensive platform that integrates meeting management and video conferencing, offering users a seamless experience for organizing and participating in meetings. The platform is designed to streamline the meeting process, from scheduling to follow-up, and is equipped with advanced features like screen sharing, file sharing, and real-time chat.",
+    live_url:
+      "https://play.google.com/store/apps/details?id=com.vs.meetly&hl=en_IN&gl=US",
+    repo_url: "https://github.com/vigneshshettyin/Meetly",
+    skills: ["Kotlin", "Firebase", "Android", "MVVM", "Jitsi SDK"],
+  },
+];
+
+const WorkSectionData: WorkDataProperties[] = [
   {
     company: "Clarivate",
     company_url: "https://www.clarivate.com",
@@ -49,9 +69,9 @@ export default function Resume() {
       <div className="flex min-h-screen flex-col max-w-4xl items-center p-6 lg:p-24 mx-auto">
         <Header ProfileData={ProfileSectionData} />
         <AboutMe AboutMeText={ProfileSectionData.about} />
-        <WorkSection WorkData={workSectionData} />
-        <DownloadResume resume_url={ProfileSectionData.resume_url} />
-        {/* <Project /> */}
+        <WorkSection WorkData={WorkSectionData} />
+        <Project ProjectData={ProjectSectionData} />
+        {/* <DownloadResume resume_url={ProfileSectionData.resume_url} /> */}
         <Footer />
       </div>
     </>

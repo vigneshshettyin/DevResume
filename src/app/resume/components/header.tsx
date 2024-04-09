@@ -40,6 +40,16 @@ const Header: React.FC<ProfileProps> = ({ ProfileData }) => {
               {ProfileData.personal_email} <UpArrow />
             </div>
           </a>
+          <a
+            href={`${ProfileData.resume_url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-950 hover:text-neutral-900 hover:underline transition-all ease-in-out w-fit ml-3"
+          >
+            <div className="flex flex-row gap-1 items-center">
+              resume <UpArrow />
+            </div>
+          </a>
         </div>
       </div>
     </div>
