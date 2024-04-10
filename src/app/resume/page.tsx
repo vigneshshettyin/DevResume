@@ -1,12 +1,15 @@
 import Header from "@components/header";
 import AboutMe from "@components/about";
 import WorkSection from "@components/work";
+import Education from "@components/education";
 // Removed in v0.0.1
 // import DownloadResume from "@components/download";
 import {
   WorkDataProperties,
   ProfileDataProperties,
   ProjectDataProperties,
+  SocialLinkProperties,
+  EducationDataProperties,
 } from "@interfaces";
 import Footer from "@components/footer";
 import Project from "@components/project";
@@ -64,7 +67,7 @@ const ProfileSectionData: ProfileDataProperties = {
   resume_url: "https://cdn.vshetty.dev/DevResume/resume.pdf",
 };
 
-const SocailLinksData = [
+const SocailLinksData: SocialLinkProperties[] = [
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/vigneshshettyin",
@@ -87,6 +90,24 @@ const SocailLinksData = [
   },
 ];
 
+const EducationData: EducationDataProperties[] = [
+  {
+    date: "Aug 2018 - Jul 2022",
+    description: "Bachelor of Engineering in Computer Science",
+    institution: "St Joseph Engineering College, Mangaluru",
+  },
+  {
+    date: "Mar 2016 - Mar 2018",
+    description: "Pre-University Education, Science Stream (PCMS)",
+    institution: "Sharada Pre-University College, Mangaluru",
+  },
+  {
+    date: "Mar 2015 - Mar 2016",
+    description: "Secondary School Education, 10th Grade",
+    institution: "Sri Sathya Sai Loka Seva High School, Alike",
+  },
+];
+
 export default function Resume() {
   return (
     <>
@@ -95,7 +116,7 @@ export default function Resume() {
         <AboutMe AboutMeText={ProfileSectionData.about} />
         <WorkSection WorkData={WorkSectionData} />
         <Project ProjectData={ProjectSectionData} />
-        {/* <DownloadResume resume_url={ProfileSectionData.resume_url} /> */}
+        <Education education={EducationData} />
         <Social SocialLinks={SocailLinksData} />
         <Footer />
       </div>

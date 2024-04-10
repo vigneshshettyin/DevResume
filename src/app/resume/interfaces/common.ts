@@ -16,6 +16,16 @@ export interface WorkProps {
   WorkData: WorkDataProperties[];
 }
 
+export interface EducationDataProperties {
+  date: string;
+  description: string;
+  institution: string;
+}
+
+export interface EducationProps {
+  education: EducationDataProperties[];
+}
+
 export interface SocialLinkProperties {
   name: string;
   url: string;
