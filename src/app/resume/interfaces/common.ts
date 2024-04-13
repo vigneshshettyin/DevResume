@@ -20,6 +20,11 @@ export interface LoaderProps {
   count: number;
 }
 
+export interface WorkLoaderProps {
+  count: number;
+  headerText: string;
+}
+
 export interface EducationDataProperties {
   date: string;
   description: string;

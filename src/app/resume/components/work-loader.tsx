@@ -1,9 +1,9 @@
-import { LoaderProps } from "@interfaces";
+import { WorkLoaderProps } from "@interfaces";
 
-const WorkLoader: React.FC<LoaderProps> = ({ count }) => {
+const WorkLoader: React.FC<WorkLoaderProps> = ({ count, headerText }) => {
   return (
     <div className="flex flex-col py-12 max-w-3xl w-full items-start min-w-xl">
-      <h3 className="text-xl py-4 text-black">Work Experience</h3>
+      <h3 className="text-xl py-4 text-black">{headerText}</h3>
       {[...Array(count)].map((_, index) => (
         <div key={index} className="flex flex-row gap-14 mt-6 animate-pulse">
           <div className="flex flex-col">

@@ -1,10 +1,18 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import Header from "@components/header";
 import AboutMe from "@components/about";
 import WorkSection from "@components/work";
 import Education from "@components/education";
+
+import HeaderLoader from "@components/header-loader";
+import AboutLoader from "@components/about-loader";
 import WorkLoader from "@components/work-loader";
-// Removed in v0.0.1
-// import DownloadResume from "@components/download";
+import EducationLoader from "@components/education-loader";
+import SocailLoader from "@components/social-loader";
+
 import {
   WorkDataProperties,
   ProfileDataProperties,
@@ -110,16 +118,37 @@ const EducationData: EducationDataProperties[] = [
 ];
 
 export default function Resume() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
     <>
       <div className="flex min-h-screen flex-col max-w-4xl items-center p-6 lg:p-24 mx-auto">
-        <Header ProfileData={ProfileSectionData} />
-        <AboutMe AboutMeText={ProfileSectionData.about} />
-        <WorkSection WorkData={WorkSectionData} />
-        <Project ProjectData={ProjectSectionData} />
-        <Education education={EducationData} />
-        <Social SocialLinks={SocailLinksData} />
-        <Footer />
+        {loading ? (
+          <>
+            <HeaderLoader count={1} />
+            <AboutLoader count={1} />
+            <WorkLoader count={1} headerText={"Work Experience"} />
+            <WorkLoader count={1} headerText={"Projects"} />
+            <EducationLoader count={3} />
+            <SocailLoader count={5} />
+            <Footer />
+          </>
+        ) : (
+          <>
+            <Header ProfileData={ProfileSectionData} />
+            <AboutMe AboutMeText={ProfileSectionData.about} />
+            <WorkSection WorkData={WorkSectionData} />
+            <Project ProjectData={ProjectSectionData} />
+            <Education education={EducationData} />
+            <Social SocialLinks={SocailLinksData} />
+            <Footer />
+          </>
+        )}
       </div>
     </>
   );
