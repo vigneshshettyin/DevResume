@@ -2,6 +2,7 @@ import Header from "@components/header";
 import AboutMe from "@components/about";
 import WorkSection from "@components/work";
 import Education from "@components/education";
+import WorkLoader from "@components/work-loader";
 // Removed in v0.0.1
 // import DownloadResume from "@components/download";
 import {

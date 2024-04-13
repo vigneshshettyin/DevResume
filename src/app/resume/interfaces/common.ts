@@ -16,6 +16,10 @@ export interface WorkProps {
   WorkData: WorkDataProperties[];
 }
 
+export interface LoaderProps {
+  count: number;
+}
+
 export interface EducationDataProperties {
   date: string;
   description: string;
