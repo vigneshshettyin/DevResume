@@ -26,6 +26,18 @@ import Social from "@components/social";
 
 const ProjectSectionData: ProjectDataProperties[] = [
   {
+    name: "EatMyURL",
+    display_image: "https://cdn.vshetty.dev/DevResume/vshetty.png",
+    type: "Personal Project",
+    date: "April 2024 - June 2024",
+    description:
+      "Developed a free, open-source URL shortener with rich analytics, enabling users to shorten URLs and track detailed usage statistics with a robust and scalable backend architecture.",
+    live_url:
+      "https://eurl.dev",
+    repo_url: "https://eurl.dev/eurl",
+    skills: ["NextJS", "Clickhouse", "PostgreSQL", "Redis", "Kafka", "Express.js", "Typescript"],
+  },
+  {
     name: "Meetly",
     display_image: "https://cdn.vshetty.dev/DevResume/vshetty.png",
     type: "Personal Project",
@@ -97,6 +109,10 @@ const SocailLinksData: SocialLinkProperties[] = [
     name: "Twitter",
     url: "https://twitter.com/vigneshshettyin",
   },
+  {
+    name : "Link Bush",
+    url : "https://linktree.vshetty.dev"
+  }
 ];
 
 const EducationData: EducationDataProperties[] = [
