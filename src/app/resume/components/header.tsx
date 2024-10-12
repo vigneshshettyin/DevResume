@@ -8,7 +8,7 @@ const Header: React.FC<ProfileProps> = ({ ProfileData }) => {
       <img src="./pic.webp" className="w-32 h-32 rounded-full" />
       <div className="flex flex-col space-y-1">
         <h1 className="text-3xl text-black text-center lg:text-left">{ProfileData.name}</h1>
-        <p className="text-neutral-700 text-sm px-6 lg:px-0 lg:text-lg">
+        <p className="text-neutral-700 text-sm text-center lg:text-lg">
           {ProfileData.about_slug}
         </p>
         <div className="flex flex-row lg:justify-start justify-center">
