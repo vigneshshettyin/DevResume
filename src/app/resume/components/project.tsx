@@ -6,12 +6,13 @@ const ProjectSection: React.FC<ProjectProps> = ({ ProjectData }) => {
   return (
     <div className="flex flex-col py-12 max-w-3xl w-full items-start min-w-xl">
       <h3 className="text-xl py-4 text-black">Projects</h3>
+      <div className="flex flex-col space-y-12 mt-4">
       {ProjectData.map((project, index) => (
-        <div key={index} className="flex flex-row gap-14 mt-6">
-          <div className="flex flex-col text-neutral-600 text-sm">
+        <div key={index} className="flex flex-row gap-14">
+          <div className="flex flex-col space-y-2">
+          <div className="text-neutral-600 text-sm">
             {project.date}
           </div>
-          <div className="flex flex-col">
             <h4 className="text-neutral-800 font-semibold">{project.name}</h4>
             <div className="flex flex-row">
               <a
@@ -46,6 +47,7 @@ const ProjectSection: React.FC<ProjectProps> = ({ ProjectData }) => {
           </div>
         </div>
       ))}
+      </div>
     </div>
   );
 };

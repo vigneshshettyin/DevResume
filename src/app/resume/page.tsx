@@ -1,17 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 import Header from "@components/header";
 import AboutMe from "@components/about";
 import WorkSection from "@components/work";
 import Education from "@components/education";
-
-import HeaderLoader from "@components/header-loader";
-import AboutLoader from "@components/about-loader";
-import WorkLoader from "@components/work-loader";
-import EducationLoader from "@components/education-loader";
-import SocailLoader from "@components/social-loader";
 
 import {
   WorkDataProperties,
@@ -55,10 +47,26 @@ const WorkSectionData: WorkDataProperties[] = [
   {
     company: "Clarivate",
     company_url: "https://www.clarivate.com",
-    position: "Associate Software Engineer",
-    date: "July 2022 - Present",
+    position: "Senior Software Engineer",
+    date: "Oct 2024 - Present",
     initial_description:
       "I'm a seasoned developer specializing in life sciences and healthcare platforms. Notable achievements include integrating OLAP engines for real-time analytics solutions. I design robust backend systems, ensuring seamless data management while meeting industry standards.",
+    description:
+      "",
+    skills: [
+      "Clickhouse",
+      "Django",
+      "Snowflake",
+      "StarRocks"
+    ],
+  },
+  {
+    company: "Clarivate",
+    company_url: "https://www.clarivate.com",
+    position: "Associate Software Engineer",
+    date: "July 2022 - Sept 2024",
+    initial_description:
+      "",
     description:
       "I collaborate with cross-functional teams to refine solutions for optimal performance and usability. Actively involved in continuous improvement initiatives, like performance optimization and scalability enhancements, to keep the platform innovative.",
     skills: [
@@ -134,27 +142,10 @@ const EducationData: EducationDataProperties[] = [
 ];
 
 export default function Resume() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  }, []);
 
   return (
     <>
-      <div className="flex min-h-screen flex-col max-w-4xl items-center p-6 lg:p-24 mx-auto">
-        {loading ? (
-          <>
-            <HeaderLoader count={1} />
-            <AboutLoader count={1} />
-            <WorkLoader count={1} headerText={"Work Experience"} />
-            <WorkLoader count={1} headerText={"Projects"} />
-            <EducationLoader count={3} />
-            <SocailLoader count={5} />
-            <Footer />
-          </>
-        ) : (
+      <div className="flex flex-col p-3 lg:p-12 items-center">
           <>
             <Header ProfileData={ProfileSectionData} />
             <AboutMe AboutMeText={ProfileSectionData.about} />
@@ -164,7 +155,6 @@ export default function Resume() {
             <Social SocialLinks={SocailLinksData} />
             <Footer />
           </>
-        )}
       </div>
     </>
   );
