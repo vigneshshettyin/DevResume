@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="flex items-center justify-center">
+    <footer className="flex items-center mt-4 justify-center">
       <h5 className="flex flex-row items-center gap-4 text-black">
         Built with ❤️ using
         <a href="https://nextjs.org" target="_blank">
